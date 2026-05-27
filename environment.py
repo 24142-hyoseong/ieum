@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from errors import IeumRuntimeError
 from tokens import Token
 
 
@@ -22,7 +23,7 @@ class Environment:
         if self.enclosing is not None:
             return self.enclosing.get(name)
 
-        raise RuntimeError(f"줄 {line}: 정의되지 않은 변수 '{variable_name}'입니다.")
+        raise IeumRuntimeError(f"줄 {line}: 정의되지 않은 변수 '{variable_name}'입니다.")
 
     def assign(self, name: Token | str, value: object) -> None:
         variable_name, line = self._extract_name_and_line(name)
@@ -36,7 +37,7 @@ class Environment:
             self.enclosing.assign(name, value)
             return
 
-        raise RuntimeError(
+        raise IeumRuntimeError(
             f"줄 {line}: 정의되지 않은 변수 '{variable_name}'에 값을 대입할 수 없습니다."
         )
 
