@@ -111,12 +111,19 @@ ieum-main/
 - 발표용 실행 시연 흐름 정리
 
 ## 테스트 예제
--추가로 전체 테스트도 확인하면 좋습니다: python -m unittest discover -s tests
-그리고 간단한 직접 테스트 파일도 가능해:
-cat > test.ieum <<'EOF'
-출력("안녕")
-출력(1 + 2 * 3)
-EOF
 
-python main.py test.ieum
+-추가로 전체 테스트도 확인하면 좋습니다: python -m unittest discover -s tests
+
+-그리고 간단한 직접 테스트 파일도 가능해:
+
+-cat > test.ieum <<'EOF'
+
+-출력("안녕")
+
+-출력(1 + 2 * 3)
+
+-EOF
+
+
+-python main.py test.ieum
 
