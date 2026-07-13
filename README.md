@@ -81,7 +81,7 @@ ieum-main/
 - `main.py`
 - `errors.py`
 
-친구는 예제, 테스트, 문서, 발표 자료를 담당합니다.
+현우는 예제, 테스트, 문서, 발표 자료를 담당합니다.
 
 - `examples/*.ieum`
 - `tests/test_lexer.py`
